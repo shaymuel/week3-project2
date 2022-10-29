@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+
+// VARIABLES
+$heading-font: Lora, sans-serif;
+$border-outline: #d0d0d0 solid 1px;
+$primary-color: #333;
+$secondary-color: #666;
+$hover-color: #DEB887;
+$active-color: #00ddff;
+$break-large: 700px;
+
+// Mixins
+@mixin links($color, $font: $heading-font, $decor: none) {
+    color: $color;
+    font-family: $font;
+    text-decoration: $decor;
+}
+
+@mixin hover() {
+    color: $hover-color;
+  }
+
+@mixin active() {
+    color: $active-color;
+  }
+
+
+/* HEADER */
+header h1 {
+    text-align: center;
+
+    @media (min-width: $break-large) {
+        & {
+            padding: 25px 0;    
+         } 
+     }
+
+    a {
+        @include links($primary-color); 
+        font-size: 60px;
+        font-weight: 600;
+    }
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    border-top: $border-outline;
+    border-bottom: $border-outline;
+
+    @media (min-width: $break-large) {
+        & {
+            text-align: end;
+            padding: 8px 0;
+         } 
+     }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul li {
+        list-style: none;
+        padding-top: 10px;
+
+        @media (min-width: $break-large) {
+            & {
+                list-style: none;
+                padding: 0;
+                display: inline;
+                margin: 0 10px;
+            }
+        }
+    }
+
+    ul li:nth-child(3) {
+        padding-bottom: 10px
+    }
+
+    ul li a {
+        @include links($secondary-color); 
+        text-transform: uppercase;
+    }
+
+    ul li a:hover {
+        @include hover();  
+    }
+
+    ul li a:active {
+        @include active();  
+    }
+}
+
+/* Date */
+.post-date {
+    text-align: end;
+    font-family: $heading-font;
+    color: $primary-color;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom: $border-outline;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+/* Section */
+section {
+    @media (min-width: $break-large) {
+        & {
+            border-bottom: $border-outline;
+            border-left: $border-outline;
+        }
+    }
+
+    h2 a {
+        @include links($secondary-color);
+        margin-left: 5px;
+
+
+        @media (min-width: $break-large) {
+            & {
+                margin-left: 10px;
+            }
+        }
+    }
+    
+    p {
+        font-family: Helvetica, Arial, sans-serif;
+        color: $primary-color;
+        margin-left: 5px;
+
+        @media (min-width: $break-large) {
+            & {
+                margin-left: 10px;
+            }
+        }
+    }
+    
+    p a {
+        @include links($secondary-color);
+    }
+
+    p a:hover {
+        @include hover();
+    }
+    
+    p a:active {
+        @include active();
+    }
+}
+
+/* FIGURE */
+figure {
+    margin: 0;
+
+    img {
+        margin: auto;
+        display: block;
+        max-width: 100%;
+    }
+}
+
+/* OTHER */
+div {
+    margin: 10px;
+}
+
+/* Other Media Query */
+@media (min-width: $break-large) {
+    article {
+        display: grid;
+        grid-template-columns: 25% auto;
+    }
+
+    .post-date {
+        border: none;
+        padding: 10px 0;
+        margin-right: 10px;
+    }
+}
+

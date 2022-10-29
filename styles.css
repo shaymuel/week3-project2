@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap");
+/* HEADER */
+header h1 {
+  text-align: center;
+}
+@media (min-width: 700px) {
+  header h1 {
+    padding: 25px 0;
+  }
+}
+header h1 a {
+  color: #333;
+  font-family: Lora, sans-serif;
+  text-decoration: none;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  border-top: #d0d0d0 solid 1px;
+  border-bottom: #d0d0d0 solid 1px;
+}
+@media (min-width: 700px) {
+  nav {
+    text-align: end;
+    padding: 8px 0;
+  }
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  list-style: none;
+  padding-top: 10px;
+}
+@media (min-width: 700px) {
+  nav ul li {
+    list-style: none;
+    padding: 0;
+    display: inline;
+    margin: 0 10px;
+  }
+}
+nav ul li:nth-child(3) {
+  padding-bottom: 10px;
+}
+nav ul li a {
+  color: #666;
+  font-family: Lora, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav ul li a:hover {
+  color: #DEB887;
+}
+nav ul li a:active {
+  color: #00ddff;
+}
+
+/* Date */
+.post-date {
+  text-align: end;
+  font-family: Lora, sans-serif;
+  color: #333;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: #d0d0d0 solid 1px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+/* Section */
+@media (min-width: 700px) {
+  section {
+    border-bottom: #d0d0d0 solid 1px;
+    border-left: #d0d0d0 solid 1px;
+  }
+}
+section h2 a {
+  color: #666;
+  font-family: Lora, sans-serif;
+  text-decoration: none;
+  margin-left: 5px;
+}
+@media (min-width: 700px) {
+  section h2 a {
+    margin-left: 10px;
+  }
+}
+section p {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  margin-left: 5px;
+}
+@media (min-width: 700px) {
+  section p {
+    margin-left: 10px;
+  }
+}
+section p a {
+  color: #666;
+  font-family: Lora, sans-serif;
+  text-decoration: none;
+}
+section p a:hover {
+  color: #DEB887;
+}
+section p a:active {
+  color: #00ddff;
+}
+
+/* FIGURE */
+figure {
+  margin: 0;
+}
+figure img {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* OTHER */
+div {
+  margin: 10px;
+}
+
+/* Other Media Query */
+@media (min-width: 700px) {
+  article {
+    display: grid;
+    grid-template-columns: 25% auto;
+  }
+  .post-date {
+    border: none;
+    padding: 10px 0;
+    margin-right: 10px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
